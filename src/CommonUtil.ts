@@ -40,6 +40,10 @@ class CommonUtil {
     public randColorHex() {
         return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0').toUpperCase();
     }
+
+    public isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
 }
 
 export default new CommonUtil();
